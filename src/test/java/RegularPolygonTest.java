@@ -19,7 +19,7 @@ class RegularPolygonTest {
     @Test
     void testMain1() {
         double expected = 72.69017017488385;
-        String input = "5\n6,5";
+        String input = "5\n6.5";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
@@ -31,7 +31,7 @@ class RegularPolygonTest {
     @Test
     void testMain2() {
         String expected = "NO";
-        String input = "2\n6,5";
+        String input = "2\n6.5";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         RegularPolygon.main(null);
