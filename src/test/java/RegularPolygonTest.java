@@ -7,6 +7,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.text.DecimalFormat;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,6 +26,8 @@ class RegularPolygonTest {
 
         RegularPolygon.main(null);
         double actual = Double.parseDouble(outContent.toString());
+        actual = Math.floor(actual * 100) / 100;
+        expected = Math.floor(actual*100) / 100;
         assertEquals(expected, actual);
     }
 
@@ -55,5 +58,6 @@ class RegularPolygonTest {
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
+
 
 }
