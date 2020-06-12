@@ -10,7 +10,7 @@ public class RegularPolygon {
         Scanner in = new Scanner(System.in);
         n = in.nextInt();
         side = in.nextDouble();
-        if(n<0){
+        if(n<1){
             System.out.println("NO");
         }
         else if(side<0){
